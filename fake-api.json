@@ -2,77 +2,22 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1",
-      "description": "Product 1 description",
-      "price": 100
+      "name": "Mouse Razer Viper Ultimate with Charging Dock - Mercury",
+      "description": "Ambidextrous Gaming Mouse with Razer™ HyperSpeed Wireless",
+      "price": 149.99
     },
     {
       "id": 2,
-      "name": "Product 2",
-      "description": "Product 2 description",
-      "price": 200
+      "name": "Keyboard Razer BlackWidow V3 Pro - Green Switch - US",
+      "description": "Wireless Full-height Mechanical Gaming Keyboard with Razer Chroma RGB",
+      "price": 229.99
+    },
+    {
+      "id": 3,
+      "name": "Headset Razer BlackWidow V3 Pro - Green Switch - US",
+      "description": "Wireless Full-height Mechanical Gaming Keyboard with Razer Chroma RGB",
+      "price": 179.99
     }
   ],
-  "orders": [
-    {
-      "products": [
-        {
-          "id": 2,
-          "name": "Product 2",
-          "description": "Product 2 description",
-          "price": 200
-        },
-        {
-          "id": 2,
-          "name": "Product 2",
-          "description": "Product 2 description",
-          "price": 200
-        },
-        {
-          "id": 2,
-          "name": "Product 2",
-          "description": "Product 2 description",
-          "price": 200
-        },
-        {
-          "id": 1,
-          "name": "Product 1",
-          "description": "Product 1 description",
-          "price": 100
-        },
-        {
-          "id": 1,
-          "name": "Product 1",
-          "description": "Product 1 description",
-          "price": 100
-        },
-        {
-          "id": 1,
-          "name": "Product 1",
-          "description": "Product 1 description",
-          "price": 100
-        },
-        {
-          "id": 1,
-          "name": "Product 1",
-          "description": "Product 1 description",
-          "price": 100
-        },
-        {
-          "id": 1,
-          "name": "Product 1",
-          "description": "Product 1 description",
-          "price": 100
-        },
-        {
-          "id": 2,
-          "name": "Product 2",
-          "description": "Product 2 description",
-          "price": 200
-        }
-      ],
-      "creditCardNumber": "3343535345",
-      "id": 1
-    }
-  ]
+  "orders": []
 }
