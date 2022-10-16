@@ -1,6 +1,9 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import Link from 'next/link';
-import { http } from '../utils/http';
+import { ListProductUseCase } from '../@core/application/product/list-products.use-case';
+import { container, Registry } from '../@core/infra/container.registry';
+import { ProductHttpGateway } from '../@core/infra/gateways/product-http.gateway';
+import { http } from '../@core/infra/http';
 import { Product } from '../utils/model';
 
 type HomeProps = {
@@ -30,12 +33,12 @@ const Home: NextPage<HomeProps> = ({products}) => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async(context) => {
-  
-  const {data: products} = await http.get("products");
+  const useCase = container.get<ListProductUseCase>(Registry.ListProductsUseCase);
+  const products = await useCase.execute();
 
   return {
     props: {
-     products,
+     products: products.map((product) => product.toJSON()),
     },
   };
 }
