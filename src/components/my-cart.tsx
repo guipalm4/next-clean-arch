@@ -8,7 +8,8 @@ export const MyCart = (props: Props) => {
   const cartContext =  useContext(CarContext)
   return (
     <nav>
-      Cart - Total {cartContext.total} | Items {cartContext.products.length}
+      Cart - Total {cartContext.total} | Items {cartContext.products.length}<br/>  
+      <button onClick={() => cartContext.clear()}>Clean Cart</button>
     </nav>
   );
 };

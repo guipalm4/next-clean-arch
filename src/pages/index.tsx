@@ -9,7 +9,6 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = ({products}) => {
   
-  
   return (
     <div>
       <h1>Ecommerce</h1>
@@ -17,9 +16,9 @@ const Home: NextPage<HomeProps> = ({products}) => {
         {products.map((product, key) => (
           <li key={key}>
           <label>Name: </label>
-          {product.name}
+          {product.name}    |   
           <Link href={`/products/${product.id}`} passHref>
-            <a href= "">View</a>
+            <a href= "#">View</a>
           </Link>
         </li>
         ))}        
