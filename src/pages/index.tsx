@@ -1,4 +1,5 @@
 import type { GetServerSideProps, NextPage } from 'next'
+import Link from 'next/link';
 import { http } from '../utils/http';
 import { Product } from '../utils/model';
 
@@ -17,7 +18,9 @@ const Home: NextPage<HomeProps> = ({products}) => {
           <li key={key}>
           <label>Name: </label>
           {product.name}
-          <a href='#'>View</a>
+          <Link href={`/products/${product.id}`} passHref>
+            <a href= "">View</a>
+          </Link>
         </li>
         ))}        
       </ul>
