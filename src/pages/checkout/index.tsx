@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { FormEvent, useContext } from "react";
 import { CarContext } from "../../context/cart.provider";
-import { http } from "../../utils/http";
+import { http } from "../../@core/infra/http";
 
 type Props = {
   
@@ -14,7 +14,7 @@ export const CheckoutPage: NextPage = (props: Props) => {
     event.preventDefault();
     const creditCardNumber = event.currentTarget.credit_card_number.value;
     const {data: order} = await http.post("orders", {
-      products: cartContext.products,
+      products: cartContext.cart.products.map((product) => ({...product.props})),
       creditCardNumber
     });
     router.push(`checkout/${order.id}/success`)    
@@ -25,7 +25,7 @@ export const CheckoutPage: NextPage = (props: Props) => {
     <div>
       <h3>My cart</h3>
       <ul>
-        {cartContext.products.map((product) => (
+        {cartContext.cart.products.map((product) => (
           <li key= {product.id}>
             Product {product.name} - $ {product.price}
           </li>

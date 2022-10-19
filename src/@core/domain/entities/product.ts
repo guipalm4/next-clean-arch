@@ -1,34 +1,30 @@
-
-
 export type ProductProps = {
   id: number;
   name: string;
   description: string;
   price: number;
-}
+};
 
 export class Product {
-
   constructor(public props: ProductProps) {}
 
   get id() {
     return this.props.id;
   }
 
-  
-  get name() : string {
-    return this.props.name
+  get name() {
+    return this.props.name;
   }
 
-  get description() : string {
+  get description() {
     return this.props.description;
   }
 
   get price() {
-    return this.props.price
+    return this.props.price;
   }
 
-  toJSON() {
+  toJSON(){
     return {
       id: this.id,
       name: this.name,
@@ -36,5 +32,4 @@ export class Product {
       price: this.price
     }
   }
-  
 }

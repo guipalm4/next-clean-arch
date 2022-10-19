@@ -1,6 +1,6 @@
 // @flow 
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { http } from '../../../utils/http';
+import { http } from '../../../@core/infra/http';
 import { Order } from '../../../utils/model';
 
 type CheckoutSuccessPageProps = {
